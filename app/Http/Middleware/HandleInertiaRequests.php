@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
@@ -39,6 +40,10 @@ class HandleInertiaRequests extends Middleware
         $data = array_merge(parent::share($request), [
             'data' => $request->session()->get('data') ? $request->session()->get('data') : [],
         ]);
+
+        if ($request->user()) {
+            $data['user'] = new UserResource($request->user());
+        }
 
         if ($request->session()->has('flash.banner') && $request->session()->has('flash.bannerStyle')) {
             $data['flash']['banner'] = $request->session()->get('flash.banner');

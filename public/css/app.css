@@ -825,6 +825,9 @@ select {
 .z-20 {
 	z-index: 20;
 }
+.col-span-6 {
+	grid-column: span 6 / span 6;
+}
 .mx-auto {
 	margin-left: auto;
 	margin-right: auto;
@@ -885,6 +888,15 @@ select {
 }
 .mr-1 {
 	margin-right: 0.25rem;
+}
+.mr-3 {
+	margin-right: 0.75rem;
+}
+.mt-10 {
+	margin-top: 2.5rem;
+}
+.ml-6 {
+	margin-left: 1.5rem;
 }
 .mb-4 {
 	margin-bottom: 1rem;
@@ -968,6 +980,9 @@ select {
 }
 .w-96 {
 	width: 24rem;
+}
+.w-20 {
+	width: 5rem;
 }
 .min-w-max {
 	min-width: -webkit-max-content;
@@ -1061,6 +1076,17 @@ select {
 .gap-6 {
 	gap: 1.5rem;
 }
+.gap-4 {
+	gap: 1rem;
+}
+.gap-1 {
+	gap: 0.25rem;
+}
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-y-reverse: 0;
+	margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
 .overflow-hidden {
 	overflow: hidden;
 }
@@ -1113,6 +1139,9 @@ select {
 }
 .border-b-2 {
 	border-bottom-width: 2px;
+}
+.border-b {
+	border-bottom-width: 1px;
 }
 .border-gray-300 {
 	--tw-border-opacity: 1;
@@ -1218,6 +1247,9 @@ select {
 .p-4 {
 	padding: 1rem;
 }
+.p-5 {
+	padding: 1.25rem;
+}
 .px-4 {
 	padding-left: 1rem;
 	padding-right: 1rem;
@@ -1262,6 +1294,10 @@ select {
 	padding-left: 0.75rem;
 	padding-right: 0.75rem;
 }
+.py-10 {
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+}
 .pt-8 {
 	padding-top: 2rem;
 }
@@ -1298,6 +1334,9 @@ select {
 .font-sans {
 	font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+.font-mono {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 .text-sm {
 	font-size: 0.875rem;
 	line-height: 1.25rem;
@@ -1313,6 +1352,10 @@ select {
 .text-xs {
 	font-size: 0.75rem;
 	line-height: 1rem;
+}
+.text-xl {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
 }
 .font-medium {
 	font-weight: 500;
@@ -1901,6 +1944,10 @@ a {
 }
 @media (min-width: 640px) {
 
+	.sm\:col-span-6 {
+		grid-column: span 6 / span 6;
+	}
+
 	.sm\:mx-0 {
 		margin-left: 0px;
 		margin-right: 0px;
@@ -2074,6 +2121,10 @@ a {
 
 	.md\:hidden {
 		display: none;
+	}
+
+	.md\:grid-cols-2 {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
 	.md\:items-center {
