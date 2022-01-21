@@ -1,0 +1,9 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "toastr.css";
+
+a {
+    @apply text-primary-500;
+    @apply font-semibold;
+}
