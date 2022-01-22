@@ -17,4 +17,3 @@ php artisan serve
 * Authentication (Fortify)
 * Teams
 * SPA (Inertia)
-* Subscriptions (Cashier Stripe)
